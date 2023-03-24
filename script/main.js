@@ -92,13 +92,13 @@ const App = new Vue({
       // this.socket.emit('video-control', params)
 
       // 使用GoEasy
-      this.goEasyConnect.publish({
-        channel: this.channel,
-        message: params
-      })
+//       this.goEasyConnect.publish({
+//         channel: this.channel,
+//         message: params
+//       })
 
       // 使用leancloud-realtime
-      // this.chatRoom.send(new TextMessage(params))
+      this.chatRoom.send(new TextMessage(params))
     },
     resultHandler(result) {
       switch (result.action) {
