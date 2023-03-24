@@ -88,15 +88,6 @@ const App = new Vue({
     sendMessage(controlParam){
       const params = JSON.stringify(controlParam)
 
-      // 使用socket-io
-      // this.socket.emit('video-control', params)
-
-      // 使用GoEasy
-//       this.goEasyConnect.publish({
-//         channel: this.channel,
-//         message: params
-//       })
-
       // 使用leancloud-realtime
       this.chatRoom.send(new TextMessage(params))
     },
