@@ -18,8 +18,8 @@ const App = new Vue({
     },
     userId: '',
     /* goEasy 添加以下变量 */
-    channel: 'channel1', // GoEasy channel
-    appkey: '******', // GoEasy应用appkey，替换成你的appkey
+    channel: 'hangzhou.goeasy.io', // GoEasy channel
+    appkey: 'BC-5e07a13038db4206bbf0a14841f32ec0', // GoEasy应用appkey，替换成你的appkey
 
     /* leancloud-realtime 添加以下变量，appId、appKey、server这几个值去leancloud控制台>设置>应用凭证里面找 */
     chatRoom: null,
@@ -92,13 +92,13 @@ const App = new Vue({
       // this.socket.emit('video-control', params)
 
       // 使用GoEasy
-      // this.goEasyConnect.publish({
-      //   channel: this.channel,
-      //   message: params
-      // })
+      this.goEasyConnect.publish({
+        channel: this.channel,
+        message: params
+      })
 
       // 使用leancloud-realtime
-      this.chatRoom.send(new TextMessage(params))
+      // this.chatRoom.send(new TextMessage(params))
     },
     resultHandler(result) {
       switch (result.action) {
