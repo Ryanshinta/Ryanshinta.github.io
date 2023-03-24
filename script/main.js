@@ -228,7 +228,7 @@ const App = new Vue({
 
     //换成你自己的一个房间的 conversation id（这是服务器端生成的），第一次执行代码就会生成，在leancloud控制台>即时通讯>对话下面，复制一个过来即可
 
-    var roomId = this.getParam("id")?this.getParam("id"):'641d25158b2ae172dadc5b40'
+    var roomId = this.getParam("id")?this.getParam("id"):'641d3163cb19404db98786ab'
 
     // 每个客户端自定义的 id
 
